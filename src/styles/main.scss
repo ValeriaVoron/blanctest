@@ -12,3 +12,837 @@
 
 // БЭМ-блоки
 @import "../blocks/modules";
+@font-face {
+    font-family: Aeroport;
+    src: url(../fonts/Aeroport.ttf);
+}
+
+:root {
+    --container-width: 1240px;
+    --container-padding: 15px;
+    --secondary: rgba(136, 136, 136, 1);
+
+}
+
+body {
+    font-family: 'Aeroport';
+    background-color: rgba(243, 243, 243, 1);
+    color: rgba(34, 34, 34, 1);
+    
+}
+.block {
+    height: 200px;
+    background-color: aqua;
+}
+
+.header{
+    overflow: hidden;
+    margin: auto;
+    background: #F3F3F3;
+    background-size: auto 104px;
+    box-shadow: 0px 2px 8px rgba(53, 27, 96, 0.08);
+    height: 104px;
+}
+
+.container {
+    position: relative;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.nav {
+    padding-top: 32px;
+    display: flex;
+    margin-left: 6%;
+    justify-content: space-between;
+    &__personal{
+        margin-right: 10px;
+    }
+        &__burger{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #222222;
+            border-radius: 25%;
+            position: relative;
+            margin-right: 32px;
+            border: none;
+
+            .nav__burger-stick, &::before, &::after {
+                position: absolute;
+                top: 50%;
+                margin-top: -1px;
+                left: 30%;
+                margin-left: -10%;
+                width: 25px;
+                height: 2px;
+                background-color: #F3F3F3;
+            }
+    
+            &::before, &::after {
+                content:'';
+            }
+    
+            &::before {
+                transform: translate(0px,-7px);
+            }
+    
+            &::after {
+                transform: translate(0px,7px);
+            }
+        }
+            &__btn-group{
+                display: flex;
+        }
+
+        @media (max-width: 700px){
+            .button{
+                display: none;
+            }
+        }
+
+    }
+
+
+.button{
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 10px;
+    width: 180px;
+    height: 40px;
+    border: 1px solid #222222;
+    border-radius: 11px;
+    color: black;
+}
+
+.text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px; 
+}
+
+.hero{
+    &__container{
+    height: 512px;
+    background-image: url(../img/blanc/globus.svg);
+    background-size: 300px 381px;
+    background-repeat: no-repeat;
+    background-position: top 1px right 58px;
+    }
+
+
+    &__title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 110%;
+        margin-bottom: 16px;
+        margin-top: 100px;
+    }
+    
+    ul {
+        list-style: none;
+        & li:before {
+            content:  "—";
+            position: relative;
+            left: -5px;
+        }
+        margin-bottom: 40px;
+    }
+
+    &__text{
+        font-size: 24px;
+    }
+
+    &__btn{
+        margin-bottom: 131px;
+    }
+
+    @media (max-width: 700px){
+        .btn{
+            padding: 22px 86px;
+            margin-top: 117px;
+            }
+            &__container{
+            background-size: 177px 224px;
+            background-position: top 50% right 15px;
+            }
+            &__title {
+                font-size: 32px;
+                margin-top: 24px;
+            }
+            &__text{
+                line-height: 133%;
+            }
+    }
+    @media (max-width: 340px){
+        &__container{
+            background-position: top 61% right 15px;
+        }
+    }
+    @media (max-width: 320px){
+        &__container{
+        width: 305px;
+        background-size: 55%;
+        background-position: top 188px right -31px;
+        }
+    }
+}
+
+.btn{
+    text-decoration: none;
+    display: table;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 28px 126px;
+    background-color: #222222;
+    color: white;
+    border-radius: 26px;
+    &:hover {
+        background-color: #434343;
+        transition: color 2s ease-in;
+    }
+    &:active {
+        position: relative;
+        top: 2px;
+    }
+}
+
+
+
+.pic-content {
+    &__container{
+    background-image: url(../img/blanc/Group.svg);
+    background-repeat: no-repeat;
+    background-size: 44%;
+    margin-top: 100px;
+    }
+    &__title{
+        margin-left: 59%;
+    }
+    &__text{
+        margin-left: 59%;
+        margin-top: 12px;
+        font-size: 24px;
+    }
+    @media (max-width: 855px){
+        margin-top: 0px;
+    }
+    @media (max-width: 700px){
+        &__container{
+            margin-top: 0px;
+            background-size: 50%;
+            background-image: url(../img/blanc/графика.svg);
+            padding-bottom: 15px;
+            background-position: bottom;
+        }
+        &__title{
+            margin-left: 0px;
+        }
+        &__text{
+            margin-left: 0px;
+        }
+    }
+    @media (max-width: 500px){
+        &__container{
+            background-size: 100%;
+        }
+    }
+    
+}
+.colortext{
+    color: rgba(202, 194, 192, 1);
+}
+
+.title{
+    font-family: 'Aeroport';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 110%;
+}
+
+.products{
+    margin-top: 183px;
+    h2{
+        margin-bottom: 40px;
+    }
+    &__btn{
+        margin-top: 5px;
+        margin-bottom: 100px;
+        margin-left: auto;
+    }
+    &__btn_size{
+        padding: 21px 148px;
+        font-weight: 400;
+        font-size: 18px;
+        border-radius: 19px;
+    }
+
+    @media (max-width: 1024px){
+        
+        .carousel-slides {
+            flex-wrap: nowrap;
+            display: flex;
+            overflow-x: hidden;
+            counter-reset: item;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden;
+        }
+
+        &__btn{
+            font-size: 14px;
+            padding: 20px 90px;
+            margin-left: 12px;
+        }
+        
+        @keyframes carousel {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            40% { transform: translateX(-200px); }
+            60% { transform: translateX(-200px); }
+            80% { transform: translateX(-400px); }
+            100% { transform: translateX(-400px); }
+        }
+        
+        .slide {
+            position: relative;
+            flex: 0 0 100%;
+            width: 100%;
+            counter-increment: item;
+            margin-bottom: 0px;
+        }
+
+        .carousel__navigation {
+            display: flex;
+        }
+        
+        .carousel__navigation-list,
+        .carousel__navigation-item {
+            display: flex;
+            
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px;
+        }
+        
+        .carousel__navigation-button {
+            display: inline-block;
+            width: 24px;
+            height: 4px;
+            background-color: #22222218;
+            background-clip: content-box;
+            border-radius: 2px;
+            font-size: 0;
+            transition: transform 0.1s;
+            margin-right: 8px;
+            a:active{
+                color: #222222;
+            }
+        }
+
+        .flex-block__flex-item:nth-child(3n) {
+            margin-right: 12px;
+        }
+    }
+    @media (max-width: 320px){
+        height: 555px;
+        margin-top: 103px;
+        .flex-block{
+        &__title{
+            font-size: 24px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        &__text{
+            font-size: 18px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    }
+}
+
+.flex-block {
+    display: flex;
+    flex-wrap: wrap;
+        &__flex-item {
+            width: calc(100% / 3);
+            width: calc((100% / 3) - (2rem / 3));
+            margin-right: 12px;
+            margin-bottom: 12px;
+            flex: 1 1 calc((100% / 3) - 2rem);
+
+            width: 100%;
+            
+            background: #FFFFFF;
+            border-radius: 19px;
+        }
+        &__flex-item:nth-child(3n) {
+            margin-right: 0;
+        }
+        &__title {
+            font-size: 24px;
+            margin-left: 32px;
+            margin-top: 28px;
+        }
+        &__text {
+            color: #888888;
+            margin-left: 32px;
+            margin-top: 8px;
+        }
+}
+
+.terms {
+    background-image: url(../img/blanc/group3.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom 9px;
+    &__main{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px rgba(53, 27, 96, 0.08);
+        border-radius: 24px;
+        height: 417px;
+        padding: 44px 36px 115px 38px;
+        box-sizing: border-box;
+    }
+    &__title{
+        margin-bottom: 12px;
+    }
+    &__text{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        &:last-child{
+            margin-top: 4px; 
+        }
+    }
+    &__content-right{
+        margin-bottom: 94px;
+        width: 43%;
+    }
+    &__content-left{
+        margin-bottom: 300px;
+    }
+
+    &__icon{
+        margin-right: 12px;
+        margin-bottom: auto;
+    }
+    &__info-title{
+        border-bottom: solid #EAEAEA 1px;
+        display: flex;
+        // +.terms__info-title{
+        //     margin-top: 16px;
+        // }
+        margin-top: 16px;
+        &:first-child{
+            margin-top: 0px;
+        }
+        &:last-of-type{
+            border-bottom: none;
+        }  
+    } 
+    
+    &__text_view{
+        color: #888888;
+        margin-top: 2px;
+        margin-bottom: 16px;
+    }
+    &__btn_green{
+        margin-top: 28px;
+        background-color: #CBFA92;
+        border-radius: 100px;
+        display: table;
+        padding: 8px 18px 10px 18px;
+        text-decoration: none;
+    }
+    &__strikethrough-text{
+        color: #888888;
+        text-decoration-line: line-through;
+    }
+    &__text-size{
+        font-weight: 700;
+        font-size: 24px;
+        color: #222222;
+    }
+    @media (max-width: 855px){
+        background-image: none;
+        &__main{
+            display: block;
+        }
+        &__content-left{
+            margin-bottom: 24px;
+        }
+        &__content-right{
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        &__block{
+            padding: 36px 12px 96px 24px;
+            height: 444px;
+        }
+    }
+}
+
+.login{
+    &__container{
+    background-image: url(../img/blanc/app.svg);
+    background-repeat: no-repeat;
+    background-size: 38%;
+    background-position: right;
+    }
+    padding-top: 224px;
+    padding-bottom: 181px;
+    &__form{
+        display: flex;
+        margin-top: 32px;
+    }
+    &__input{
+        border-radius: 12px;
+        background: #FFFFFF;
+        padding: 16px 27px 16px 20px;
+        width: 351px;
+        height: 68px;
+        border: none;
+        box-sizing:border-box;
+    }
+    &__btn{
+        font-weight: 700;
+        font-size: 14px;
+        padding: 24px 75px;
+        border-radius: 12px;
+        margin-left: 24px;
+    }
+    &__text{
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    &__checkbox{
+        margin-top: 8px;
+    }
+    &__flex-text{
+        display: flex;
+        column-gap: 66px;
+        margin-bottom: 12px;
+        margin-top: 20px;
+    }
+    @media (min-width: 970px){
+        &__btn_s{
+            display: none;
+        }
+    }
+    @media (max-width: 970px){
+        padding-top: 40px;
+        padding-bottom: 56px;
+        &__container{
+            background-size: 33%;
+        }
+        &__btn{
+            display: none;
+        }
+        &__btn_s{
+            font-size: 14px;
+            padding: 24px 105px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        &__text_disabled{
+            display: none;
+        }
+        
+    }
+    @media (max-width: 700px){
+    &__container{
+        background-size: 264px 330px;
+        background-position: left 28px top 141px;
+    }
+    &__form{
+        margin-top: 279px;
+    }
+}
+    @media (max-width: 320px){
+        background-size: 82%;
+        background-position: right 27px top 182px;
+    }
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    &__text{
+        margin-left: 12px;
+    }
+}
+.checkbox__box-custom{
+    appearance: none;
+    display: block;
+    align-items: center;
+    user-select: none;
+    margin-right: 12px;
+}
+
+.checkbox__box-custom::before {
+    content: '';
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    background: #FFFFFF;
+}
+
+.checkbox__box-custom:checked::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.excellence{
+    h2{
+        margin-bottom: 32px;
+    }
+    &__btn{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-bottom: 100px;
+    }
+    &__btn_size{
+        padding: 22px 91px;
+        font-weight: 400;
+        font-size: 18px;
+        border-radius: 19px;
+    }
+    &__landing-card{
+        display: flex;
+        // width: 1240px;
+        column-gap: 12px;
+    }
+    @media (max-width: 400px){
+        &__btn_size{
+            font-size: 16px;
+            padding: 22px 90px;
+        }
+    }
+}
+
+.landing-card {
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: column;
+    flex-basis: 50%;
+    h3{
+        font-weight: 400;
+    }
+    span{
+        font-weight: 550;
+    }
+        &__flex-item {
+            width: 100%;
+            // width: calc(100% / 3);
+            // width: calc((100% / 3) - (2rem / 3));
+            // margin-right: 12px;
+            margin-bottom: 12px;
+            // flex: 1 1 calc((100% / 3) - 2rem);
+
+            // width: 100%;
+            // height: 188px;
+            background: #FFFFFF;
+            border-radius: 19px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        // &__flex-item:nth-child(3n) {
+        //     margin-right: 0;
+        // }
+        @media (max-width: 1024px){
+            &__flex-item{
+                background-image: url(../img/blanc/Union.svg);
+                background-repeat: no-repeat;
+                background-position: center right 25px;
+            }
+        }
+}
+footer{
+    background-color: #EAEAEA;
+}
+.footer{
+    &__connection{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid #888888 1px;
+        height: 68px;
+        margin-bottom: 24px;
+        padding-top: 140px;
+    }
+    &__phone{
+        display: flex;
+    }
+    &__whatsapp{
+        display: flex
+    }
+    &__calls{
+        display: flex;
+        column-gap: 32px;
+        
+    }
+    &__text{
+        margin-left: 12px;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        
+    }
+    &__img{
+        margin-bottom: auto;
+    }
+    &__text_size{
+        font-size: 12px;
+    }
+    &__text_underline{
+        text-decoration: underline;
+    }
+    &__links{
+        margin-bottom: 57px;
+    }
+    &__link{
+        font-size: 12px;
+        letter-spacing: 0.01em;
+
+        color: #888888;
+        margin-right: 12px;
+    }
+    &__license{
+        margin-top: 24px;
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social{
+        display: flex;
+        column-gap: 16px;
+        margin-bottom: 60px;
+    }
+    @media (max-width: 1024px){
+        &__stories{
+            display: flex;
+            margin-bottom: 28px;
+        }
+        &__footer{
+            display: grid;
+        }
+        &__license{
+            margin-top: 0px;
+        }
+        &__social{
+            order: -1;
+            margin-bottom: 0px;
+            margin-top: 17px;
+        }
+        &__img{
+            margin-bottom: 0px;
+        }
+        &__phone{
+            margin-bottom: 12px;
+        }
+        &__whatsapp{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .title{
+        font-size: 32px;
+    }
+    .hero{
+        &__text{
+            font-size: 18px;
+        }
+        &__btn{
+            padding: 22px 90px;
+            font-size: 18px;
+        }
+        &__title{
+            font-size: 32px;
+        }
+    }
+    .pic-content{
+        &__title{
+            font-size: 32px;
+        }
+        &__text{
+            font-size: 18px;
+        }
+    }
+    .terms{
+        &__text{
+            font-size: 16px;
+        }
+    }
+    .login{
+        &__text{
+            font-size: 12px;
+        }
+    }
+    .excellence{
+        &__landing-card{
+            display: block;
+        }
+        p{
+            display: none;
+        }
+        
+        .flex-block__title{
+            font-size: 24px;
+        }
+        
+    }
+    .landing-card:last-child {
+        margin-top: 12px;
+    }
+    .landing-card{
+        &__flex-item{
+            padding: 0px 0px 27px;
+        }
+    }
+    .footer{
+        padding: 40px 0px 0px 0px;
+        &__connection{
+            display: inline;
+        }
+        &__calls{
+            display: inline;
+        }
+    }
+}
+
+@media (min-width: 1025px){
+    aside{
+        display: none;
+    }
+    .transfer{
+        display: none;
+    }
+}
