@@ -19,7 +19,7 @@
 
 :root {
     --container-width: 1240px;
-    --container-padding: 15px;
+    --container-padding: 100px;
     --secondary: #F3F3F3;
     --basic: #222222;
     --rare: #888888;
@@ -60,8 +60,9 @@ body {
 
 .nav {
     padding-top: 32px;
+    padding-left: 80px;
+    padding-right: 32px;
     display: flex;
-    margin-left: 6%;
     justify-content: space-between;
     &__personal{
         margin-right: 10px;
@@ -73,7 +74,6 @@ body {
             background-color: #222222;
             border-radius: 11px;
             position: relative;
-            margin-right: 32px;
             border: none;
 
             @at-root .nav__burger-stick, &::before, &::after {
@@ -145,12 +145,11 @@ body {
 .hero{
     &__container{
     height: 512px;
-    background-image: url(../img/blanc/globus.svg);
+    background-image: url(../img/blanc/globus.png);
     background-size: 300px 381px;
     background-repeat: no-repeat;
     background-position: top 1px right 58px;
     }
-
 
     &__title{
         font-style: normal;
@@ -161,7 +160,7 @@ body {
         margin-top: 100px;
     }
     
-    ul {
+    &__list {
         list-style: none;
         & li:before {
             content:  "—";
@@ -176,7 +175,7 @@ body {
     }
 
     &__btn{
-        margin-bottom: 131px;
+        
     }
 
     @media (max-width: 700px){
@@ -212,13 +211,16 @@ body {
 
 .btn{
     text-decoration: none;
-    display: table;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
     font-weight: 400;
-    padding: 28px 126px;
     background-color: var(--basic);
     color: white;
     border-radius: 26px;
+    width: 418px;
+    height: 90px;
     &:hover {
         background-color: #434343;
         transition: color 2s ease-in;
@@ -227,13 +229,20 @@ body {
         position: relative;
         top: 2px;
     }
+    &_extended{
+        width: 405px;
+        height: 68px;
+        font-weight: 400;
+        font-size: 18px;
+        border-radius: 19px;
+    }
 }
 
 
 
 .pic-content {
     &__container{
-    background-image: url(../img/blanc/Group.svg);
+    background-image: url(../img/blanc/Group.png);
     background-repeat: no-repeat;
     background-size: 44%;
     margin-top: 100px;
@@ -292,12 +301,6 @@ body {
         margin-top: 5px;
         margin-bottom: 100px;
         margin-left: auto;
-    }
-    &__btn_extended{
-        padding: 21px 148px;
-        font-weight: 400;
-        font-size: 18px;
-        border-radius: 19px;
     }
 
     @media (max-width: 1024px){
