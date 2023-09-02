@@ -35,7 +35,7 @@
                         <a href="#!"><img class="logo" src="../img/blanc/logo.svg" alt="logo"></a>
                     </div>
                     <div class="nav__btn-group">
-                    <a href="" class="nav__personal button">Личный кабинет</a>
+                    <a href="" class="nav__personal clear-button">Личный кабинет</a>
                     <button class="nav__burger">
                         <span class="nav__burger-stick"></span>
                     </button>
@@ -53,19 +53,21 @@
                         <li>Комфортная комиссия <br class="desktop-hidden"> от 2,9%</li>
                         <li>Бухгалтерия за 0 ₽</li>   
                     </ul>
-                    <a href="" class="btn hero__btn">Открыть счет</a>
+                    <a href="" class="btn hero__btn btn_position-bottom">Открыть счет</a>
                 </div>
             </div>
             <section class="pic-content container">
                 <div class="pic-content__container">
-                <h2 class="title pic-content__title">Подходит всем, <br> у кого онлайн-бизнес</h2>
-                <p class="text pic-content__text">Любой — не только онлайн-курсы и марафоны,
-                    но и репетиторство, фриланс на зарубежных заказчиков, 
-                    вебинары и даже платные видеопоздравления <span class="colortext">(вдруг ты популярный блогер)</span></p>
+                    <div class="pic-content__content-right">
+                        <h2 class="title">Подходит всем, <br> у кого онлайн-бизнес</h2>
+                        <p class="text pic-content__text">Любой — не только онлайн-курсы и марафоны,
+                        но и репетиторство, фриланс на зарубежных заказчиков, 
+                        вебинары и даже платные видеопоздравления <span class="colortext">(вдруг ты популярный блогер)</span></p>
+                    </div>
                 </div>
             </section>
             <section class="products container">
-                    <h2 class="title">Всё, чтобы не думать о деньгах, а зарабатывать</h2>
+                    <h2 class="title products__title">Всё, чтобы не думать о деньгах, а зарабатывать</h2>
                     <div class="carousel">
                     <div class="flex-block carousel-slides">
                     <label id="slide1" for="slide1" class="flex-block__flex-item slide">
@@ -142,10 +144,9 @@
                                 комфортно и солидной онлайн-школе, <br>
                                 и камерному проекту с небольшими охватами </p>
                         </div>
-                        <div class="terms__content-right">
-                            <div class="terms__block">
+                        <div class="terms__content-right terms__block">
                                 <div class="terms__info-title">
-                                    <img class="terms__icon" src="../img/blanc/others.svg" alt="">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/others.svg" alt="">
                                     <div>
                                         <p class="text terms__text">700 000 ₽ переводов физлицам</p>
                                         <p class="text terms__text terms__text_view">Всё, что выше — 2%</p>
@@ -153,7 +154,7 @@
                                 </div>
 
                                 <div class="terms__info-title">
-                                    <img class="terms__icon" src="../img/blanc/Cash.svg" alt="">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/Cash.svg" alt="">
                                     <div>
                                         <p class="text terms__text">20 платёжек</p>
                                         <p class="text terms__text terms__text_view">Остальные по 30 ₽</p>
@@ -161,7 +162,7 @@
                                 </div>
 
                                 <div class="terms__info-title">
-                                    <img class="terms__icon" src="../img/blanc/Icon.svg" alt="">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/Icon.svg" alt="">
                                     <div>
                                         <p class="text terms__text">50 000 ₽ на снятие в банкомате</p>
                                         <p class="text terms__text terms__text_view">Всё, что выше — 2%</p>
@@ -169,15 +170,14 @@
                                 </div>
 
                                 <div class="terms__info-title">
-                                    <img class="terms__icon" src="../img/blanc/Icon2.svg" alt="">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/Icon2.svg" alt="">
                                     <div>
                                         <p class="text terms__text">Комиссия за платежи физлиц — от 2,9%</p>
                                     </div>
                                 </div>
 
-                                <a href="#!" class="btn terms__btn_green"><span class="text terms__strikethrough-text"> 1500 ₽</span>
+                                <a href="#!" class="btn terms__btn btn_green"><span class="text terms__strikethrough-text"> 1500 ₽</span>
                                     <span class="text terms__text-size"> 1000 ₽</span></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                     <h2 class="title">Открой счёт в Бланке <br> и веди бизнес <br class="desktop-hidden"> без границ</h2>
                     <form class="login__form">
                         <input type="tel" class="login__input" placeholder="+7  (xxx) xxx-xx-xx">
-                        <a href="" class="btn login__btn">Отправить</a>
+                        <button class="btn login__btn btn_small" type="submit" value="">Отправить</button>
                     </form>
                     <div class="login__flex-text">
                     <p class="text login__text login__description">Если удобнее поговорить в чате, отметь свой <br>вариант:</p>
@@ -202,7 +202,7 @@
                         <label class="checkbox"><input type="checkbox" class="checkbox__box-custom" name="whatsapp" value="yes">
                             <p class="login__text checkbox__text">Напишите мне в Телеграме</p>
                         </label>
-                        <button type="submit" href="" class="btn login__btn_s">Продолжить</button>
+                        <button type="submit" value=""class="btn login__btn_s">Продолжить</button>
                 </div>
             </section>
             <section class="excellence container">
@@ -211,22 +211,22 @@
                 <div class="excellence__landing-card">
                     <div class="landing-card">
                         <div class="landing-card__flex-item landing-card__flex-item_view">
-                            <h3 class="title flex-block__title landing-card__title_boldness">Всё включено</h3>
+                            <h3 class="title landing-card__title">Всё включено</h3>
                             <p class="text flex-block__text">Просто открой счёт в Бланке — международные платежи и остальные фишки уже в него входят</p>
                         </div>
                         
                         <div class="landing-card__flex-item landing-card__flex-item_view">
-                            <h3 class="title flex-block__title landing-card__title_boldness">Минимум <br class="desktop-hidden"> документов</h3>
+                            <h3 class="title landing-card__title">Минимум <br class="desktop-hidden"> документов</h3>
                             <p class="text flex-block__text">Паспорт и СНИЛС. Если у тебя ООО, ещё понадобится подтверждение юридического адреса</p>
                         </div>
                         
                         <div class="landing-card__flex-item landing-card__flex-item_view">
-                            <h3 class="title flex-block__title landing-card__title_boldness">Один день <br class="desktop-hidden"> на всё про всё</h3>
+                            <h3 class="title landing-card__title">Один день <br class="desktop-hidden"> на всё про всё</h3>
                             <p class="text flex-block__text">Оставь заявку на открытие счёта, назначь встречу с нами на <br> ту же дату — и мы уложимся в рабочий день. Выпустим <br> электронную подпись, отправим сканы в налоговую, откроем <br> счёт и всё подключим. Бесплатно</p>
                         </div>
                         
                         <div class="landing-card__flex-item landing-card__flex-item_view">
-                            <h3 class="title flex-block__title landing-card__title_boldness">Платежи <br class="desktop-hidden"> без границ <br class="desktop-hidden"> в любой валюте </h3>
+                            <h3 class="title landing-card__title">Платежи <br class="desktop-hidden"> без границ <br class="desktop-hidden"> в любой валюте </h3>
                             <p class="text flex-block__text">Принимай платежи от физлиц из 185 стран в 87 разных <br> валютах</p>
                         </div>
                     </div>
@@ -235,41 +235,40 @@
                     <div class="landing-card">
                 
                         <div class="landing-card__flex-item">
-                            <h3 class="title flex-block__title flex-block__title_boldness">Комфортная <br class="desktop-hidden"> комиссия </h3>
+                            <h3 class="title landing-card__title">Комфортная <br class="desktop-hidden"> комиссия </h3>
                             <p class="text flex-block__text">Только за успешные платежи от физлиц: <br>                                             
-                                <span> для карт банков РФ </span> — 2,9% (не менее 5₽) <br>
+                                <span class="landing-card__text_bold"> для карт банков РФ </span> — 2,9% (не менее 5₽) <br>
                                 <span>для карт иностранных банков </span>— 9,5% (не менее 79₽)</p>
                         </div>
                         
                         <div class="landing-card__flex-item">
-                            <h3 class="title flex-block__title flex-block__title_boldness">Бесплатная <br class="desktop-hidden"> встроенная <br class="desktop-hidden"> онлайн-касса </h3>
+                            <h3 class="title landing-card__title">Бесплатная <br class="desktop-hidden"> встроенная <br class="desktop-hidden"> онлайн-касса </h3>
                             <p class="text flex-block__text">Чеки за покупки, возвраты и коррекции печатаются <br> автоматически, бесплатно и безлимитно</p>
                         </div>
                         
                         <div class="landing-card__flex-item">
-                            <h3 class="title flex-block__title flex-block__title_boldness">Частичные <br class="desktop-hidden"> возвраты</h3>
+                            <h3 class="title landing-card__title">Частичные <br class="desktop-hidden"> возвраты</h3>
                             <p class="text flex-block__text">Можно проводить возврат целиком, а можно частично <br> по отдельным позициям из чека</p>
                         </div>
                         
                         <div class="landing-card__flex-item">
-                            <h3 class="title flex-block__title flex-block__title_boldness">Поддержка 24/7</h3>
+                            <h3 class="title landing-card__title">Поддержка 24/7</h3>
                             <p class="text flex-block__text">Нет ответа на нужный вопрос, возникла проблема или просто хочется ещё раз обсудить процесс — со всем этим можно <br> писать в чат личного кабинета </p>
                         </div>
                     </div>
 
                 </div>
 
-                <a href="" class="btn excellence__btn excellence__btn_size">Открыть счет</a>
-            </section>
-            
+                <a href="" class="btn excellence__btn btn_standard">Открыть счет</a>
+            </section>    
         </main>
         <footer class="footer">
             <div class="container">
-            <div class="footer__connection footer__flex">
+            <div class="footer__connection footer__flex-item">
                 <div class="footer__stores">
-                    <a href=""><img src="../img/blanc/appstore.svg" alt=""></a>
-                    <a href=""><img src="../img/blanc/googleplay.svg" alt="#!"></a>
-                    <a href=""><img src="../img/blanc/appgallery.svg" alt="#!"></a>
+                    <a href=""><img src="../img/blanc/appstore.svg" alt="" class="footer__button"></a>
+                    <a href=""><img src="../img/blanc/googleplay.svg" alt="#!" class="footer__button"></a>
+                    <a href=""><img src="../img/blanc/appgallery.svg" alt="#!" class="footer__button"></a>
                 </div>
                 <div class="footer__calls">
                     <div class="footer__phone footer__flex">

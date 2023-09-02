@@ -52,10 +52,14 @@ body {
 }
 
 .container {
+    overflow-x: hidden;
     position: relative;
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
+    @media (max-width: 500px){
+        padding: 12px;
+    }
 }
 
 .nav {
@@ -110,17 +114,20 @@ body {
             &__burger{
                 width: 32px;
                 height: 32px;
-                margin-right: 12px;
                 border-radius: 9px;
                 .nav__burger-stick, &::before, &::after {
                     width: 20px;
                 }
             }
         }
+        @media (max-width: 500px){
+            padding-left: 12px;
+            padding-right: 12px;
+        }
     }
 
 
-.button{
+.clear-button{
     box-sizing: border-box;
     text-decoration: none;
     display: flex;
@@ -140,6 +147,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 18px; 
+    margin: 0;
 }
 
 .hero{
@@ -174,19 +182,19 @@ body {
         font-size: 24px;
     }
 
-    &__btn{
-        
-    }
-
-    @media (max-width: 700px){
-            .btn{
-            padding: 22px 86px;
-            margin-top: 117px;
-            }
-            &__container{
+    @media(max-width: 1024px){
+        &__btn{
+            font-size: 18px;
+            width: 296px;
+            height: 68px;
+        }
+        &__container{
             background-size: 177px 224px;
             background-position: top 50% right 15px;
             }
+    }
+    @media (max-width: 700px){
+            
             &__title {
                 font-size: 32px;
                 margin-top: 24px;
@@ -236,6 +244,31 @@ body {
         font-size: 18px;
         border-radius: 19px;
     }
+    &_green{
+        background-color: #CBFA92;
+        border-radius: 100px;
+        width: 173px;
+        height: 44px;
+    }
+    &_small{
+        font-weight: 700;
+        font-size: 14px;
+        width: 224px;
+        height: 68px;
+        border-radius: 12px;
+    }
+    &_standard{
+        width: 307px;
+        height: 68px;
+        font-weight: 400;
+        font-size: 18px;
+        border-radius: 19px;
+    }
+    @media (max-width: 700px){
+        &_position-bottom{
+            margin-top: 117px;
+        }
+    }
 }
 
 
@@ -245,13 +278,14 @@ body {
     background-image: url(../img/blanc/Group.png);
     background-repeat: no-repeat;
     background-size: 44%;
+    background-position: center left;
     margin-top: 100px;
     }
-    &__title{
-        margin-left: 59%;
+    &__content-right{
+        width: 50%;
+        margin-left: auto;
     }
     &__text{
-        margin-left: 59%;
         margin-top: 12px;
         font-size: 24px;
     }
@@ -294,17 +328,18 @@ body {
 
 .products{
     margin-top: 183px;
-    h2{
+    display: flex;
+    flex-direction: column;
+    &__title{
         margin-bottom: 40px;
     }
     &__btn{
-        margin-top: 5px;
+        margin-top: 17px;
         margin-bottom: 100px;
         margin-left: auto;
     }
 
     @media (max-width: 1024px){
-        
         .carousel-slides {
             flex-wrap: nowrap;
             display: flex;
@@ -317,15 +352,11 @@ body {
             padding: 0;
             overflow-y: hidden;
         }
-
         &__btn{
             font-size: 14px;
             padding: 20px 90px;
             margin-left: 12px;
         }
-        
-        
-        
         .slide {
             position: relative;
             flex: 0 0 100%;
@@ -385,35 +416,24 @@ body {
 }
 
 .flex-block {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
         &__flex-item {
-            
-            margin-right: 12px;
-            margin-bottom: 12px;
-            flex: 1 1 calc((100% / 3) - 2rem);
-
-            width: 100%;
-            
+            padding: 28px 32px;
             background: #FFFFFF;
             border-radius: 19px;
         }
-        &__flex-item:nth-child(3n) {
-            margin-right: 0;
-        }
         &__title {
             font-size: 24px;
-            margin-left: 32px;
-            margin-top: 28px;
         }
         &__text {
             color: var(--rare);
-            margin-left: 32px;
-            margin-top: 8px;
         }
 }
 
 .terms {
+    padding-top: 60px;
     background-image: url(../img/blanc/group3.svg);
     background-repeat: no-repeat;
     background-position: center bottom 9px;
@@ -425,16 +445,13 @@ body {
         background-color: #FFFFFF;
         box-shadow: 0px 2px 8px rgba(53, 27, 96, 0.08);
         border-radius: 24px;
-        height: 417px;
-        padding: 44px 36px 115px 38px;
+        padding: 36px 32px 36px 32px;
         box-sizing: border-box;
     }
     &__title{
         margin-bottom: 12px;
     }
     &__text{
-        margin-top: 0px;
-        margin-bottom: 0px;
         &:last-child{
             margin-top: 4px; 
         }
@@ -468,17 +485,13 @@ body {
         margin-top: 2px;
         margin-bottom: 16px;
     }
-    &__btn_green{
+    &__btn{
         margin-top: 28px;
-        background-color: #CBFA92;
-        border-radius: 100px;
-        display: table;
-        padding: 8px 18px 10px 18px;
-        text-decoration: none;
     }
     &__strikethrough-text{
         color: var(--rare);
         text-decoration-line: line-through;
+        margin-right: 5px;
     }
     &__text-size{
         font-weight: 700;
@@ -527,10 +540,6 @@ body {
         box-sizing:border-box;
     }
     &__btn{
-        font-weight: 700;
-        font-size: 14px;
-        padding: 24px 75px;
-        border-radius: 12px;
         margin-left: 24px;
     }
     &__text{
@@ -593,7 +602,7 @@ body {
     &__text{
         margin-left: 12px;
     }
-    .checkbox__box-custom{
+    &__box-custom{
         appearance: none;
         display: block;
         align-items: center;
@@ -624,9 +633,9 @@ body {
 }
 
 .excellence{
-    h2{
-        margin-bottom: 32px;
-    }
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
     &__btn{
         margin-top: 20px;
         margin-left: auto;
@@ -641,6 +650,7 @@ body {
     &__landing-card{
         display: flex;
         column-gap: 12px;
+        margin-top: 32px;
     }
     @media (max-width: 400px){
         &__btn_size{
@@ -651,23 +661,23 @@ body {
 }
 
 .landing-card {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-    h3{
+    display: grid;
+    grid-gap: 12px;
+    &__title{
         font-weight: 400;
+        font-size: 24px;
     }
-    span{
+    &__text{
+        color: var(--rare);
+        margin-top: 8px;
+    }
+    &__text_bold{
         font-weight: 550;
     }
         &__flex-item {
-            width: 100%;
-            margin-bottom: 12px;
+            padding: 32px 32px;
             background-color: #FFFFFF;
             border-radius: 19px;
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
         @media (max-width: 1024px){
             &__flex-item{
@@ -681,7 +691,7 @@ footer{
     background-color: #EAEAEA;
 }
 .footer{
-    &__flex{
+    &__flex-item{
         display: flex;
     }
     &__connection{
@@ -691,7 +701,15 @@ footer{
         margin-bottom: 24px;
         padding-top: 140px;
     }
-    
+    &__stores{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__button{
+        display: block;
+    }
+
     &__calls{
         display: flex;
         column-gap: 32px;
@@ -709,6 +727,7 @@ footer{
     }
     &__text_size{
         font-size: 12px;
+        margin-bottom: 20px;
     }
     &__text_underline{
         text-decoration: underline;
@@ -773,10 +792,7 @@ footer{
         &__text{
             font-size: 18px;
         }
-        &__btn{
-            padding: 22px 90px;
-            font-size: 18px;
-        }
+        
         &__title{
             font-size: 32px;
         }
