@@ -27,8 +27,7 @@
     </head>
     <body>
         @@include("../blocks/modules/header/header.html")
-        @@include("../blocks/modules/footer/footer.html")
-        
+        @@include("../blocks/modules/footer/footer.html")   
         <header class="header">
                 <div class="nav">
                     <div class="logo">
@@ -36,14 +35,14 @@
                     </div>
                     <div class="nav__btn-group">
                     <a href="" class="nav__personal clear-button">Личный кабинет</a>
-                    <button class="nav__burger">
-                        <span class="nav__burger-stick"></span>
-                    </button>
-                    </div>
+                        <input type="checkbox" id="menu__toggle"> 
+                        <label class="nav__burger" for="menu__toggle">
+                            <span class="nav__burger-stick"></span>
+                        </label>
+                
                 </div>
-            
+                </div>
         </header>
-        
         <main>
             <div class="hero container">
                 <div class="hero__container">
@@ -202,7 +201,7 @@
                         <label class="checkbox"><input type="checkbox" class="checkbox__box-custom" name="whatsapp" value="yes">
                             <p class="login__text checkbox__text">Напишите мне в Телеграме</p>
                         </label>
-                        <button type="submit" value=""class="btn login__btn_s">Продолжить</button>
+                        <button type="submit" value=""class="btn btn_hidden login__btn_hidden">Продолжить</button>
                 </div>
             </section>
             <section class="excellence container">
@@ -271,11 +270,11 @@
                     <a href=""><img src="../img/blanc/appgallery.svg" alt="#!" class="footer__button"></a>
                 </div>
                 <div class="footer__calls">
-                    <div class="footer__phone footer__flex">
+                    <div class="footer__phone">
                         <img class="footer__img" src="../img/blanc/Phone.svg" alt="#!">
                         <p class="text footer__text">8 (800) 600-98-98 <br> <span class="colortext footer__text_size"> Бесплатно по России</span></p>
                     </div>
-                    <div class="footer__whatsapp footer__flex">
+                    <div class="footer__whatsapp">
                         <img class="footer__img" src="../img/blanc/whatsapp.svg" alt="">
                         <p class="text footer__text footer__text_underline">Напиши в Вотсапе</p>
                     </div>
@@ -314,7 +313,6 @@
                 </div>
             </div>
         </div>
-        </footer>
-        
+        </footer>  
     </body>
 </html>

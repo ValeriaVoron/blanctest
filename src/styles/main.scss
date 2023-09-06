@@ -52,13 +52,15 @@ body {
 }
 
 .container {
-    overflow-x: hidden;
     position: relative;
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
-    @media (max-width: 500px){
-        padding: 12px;
+    overflow-x: hidden;
+    @media (max-width: 700px){
+        padding-left: 12px;
+        padding-right: 12px;
+        
     }
 }
 
@@ -72,12 +74,13 @@ body {
         margin-right: 10px;
     }
         &__burger{
+            position: relative; 
+            cursor: pointer;
             display: block;
             width: 40px;
             height: 40px;
             background-color: #222222;
             border-radius: 11px;
-            position: relative;
             border: none;
 
             @at-root .nav__burger-stick, &::before, &::after {
@@ -103,6 +106,29 @@ body {
                 transform: translate(0px,7px);
             }
         }
+        #menu__toggle {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        #menu__toggle:checked + .nav__burger .nav__burger-stick {
+            background-color: transparent;
+        }
+        
+        #menu__toggle:checked + .nav__burger .nav__burger-stick::before {
+            transform: rotate(45deg);
+            left: 0;
+        }
+        
+        #menu__toggle:checked + .nav__burger .nav__burger-stick::after {
+            left: 0;
+            transform: rotate(-45deg);
+        }
             &__btn-group{
                 display: flex;
         }
@@ -120,11 +146,13 @@ body {
                 }
             }
         }
-        @media (max-width: 500px){
+        @media (max-width: 700px){
             padding-left: 12px;
             padding-right: 12px;
         }
     }
+
+    
 
 
 .clear-button{
@@ -190,11 +218,13 @@ body {
         }
         &__container{
             background-size: 177px 224px;
-            background-position: top 50% right 15px;
+            background-position: top 75px right 15px;
             }
     }
     @media (max-width: 700px){
-            
+            &__container{
+                background-position: top 146px right 15px;
+            }
             &__title {
                 font-size: 32px;
                 margin-top: 24px;
@@ -203,18 +233,12 @@ body {
                 line-height: 133%;
             }
     }
-    @media (max-width: 340px){
-        &__container{
-            background-position: top 61% right 15px;
-        }
-    }
     @media (max-width: 320px){
         &__container{
-        width: 305px;
-        background-size: 55%;
-        background-position: top 188px right -31px;
-        }
+            width: 305px;
+            background-position: top 180px right -23px;
     }
+}
 }
 
 .btn{
@@ -264,9 +288,18 @@ body {
         font-size: 18px;
         border-radius: 19px;
     }
+    &_hidden{
+        font-size: 14px;
+        border-radius: 12px;
+        width: 296px;      
+        height: 68px;
+    }
     @media (max-width: 700px){
         &_position-bottom{
             margin-top: 117px;
+        }
+        &_standard{
+            width: 296px;
         }
     }
 }
@@ -274,6 +307,7 @@ body {
 
 
 .pic-content {
+    overflow-y:hidden;
     &__container{
     background-image: url(../img/blanc/Group.png);
     background-repeat: no-repeat;
@@ -288,6 +322,15 @@ body {
     &__text{
         margin-top: 12px;
         font-size: 24px;
+    }
+    @media (max-width: 1024px){
+        &__container{
+        background-position: center center;
+        }
+        &__content-right{
+            width: 100%;
+        }
+        
     }
     @media (max-width: 855px){
         margin-top: 0px;
@@ -324,6 +367,9 @@ body {
     font-weight: 700;
     font-size: 36px;
     line-height: 110%;
+    @media (max-width: 1024px){
+        font-size: 32px;
+    }
 }
 
 .products{
@@ -354,8 +400,9 @@ body {
         }
         &__btn{
             font-size: 14px;
-            padding: 20px 90px;
-            margin-left: 12px;
+            width: 296px;
+            height: 68px;
+            margin-bottom: 46px;
         }
         .slide {
             position: relative;
@@ -429,6 +476,7 @@ body {
         }
         &__text {
             color: var(--rare);
+            margin-top: 8px;
         }
 }
 
@@ -500,6 +548,7 @@ body {
     }
     @media (max-width: 855px){
         background-image: none;
+        margin-bottom: 40px;
         &__main{
             display: block;
         }
@@ -509,10 +558,6 @@ body {
         &__content-right{
             width: 100%;
             margin-bottom: 0px;
-        }
-        &__block{
-            padding: 36px 12px 96px 24px;
-            height: 444px;
         }
     }
 }
@@ -557,7 +602,7 @@ body {
         margin-top: 20px;
     }
     @media (min-width: 970px){
-        &__btn_s{
+        &__btn_hidden{
             display: none;
         }
     }
@@ -570,10 +615,7 @@ body {
         &__btn{
             display: none;
         }
-        &__btn_s{
-            font-size: 14px;
-            padding: 24px 105px;
-            border-radius: 12px;
+        &__btn_hidden{
             margin-top: 20px;
         }
         &__text_disabled{
@@ -582,6 +624,7 @@ body {
         
     }
     @media (max-width: 700px){
+        padding-bottom: 16px;
     &__container{
         background-size: 264px 330px;
         background-position: left 28px top 141px;
@@ -652,6 +695,9 @@ body {
         column-gap: 12px;
         margin-top: 32px;
     }
+    @media (max-width: 1024px){
+        padding-top: 40px;
+    }
     @media (max-width: 400px){
         &__btn_size{
             font-size: 16px;
@@ -674,13 +720,17 @@ body {
     &__text_bold{
         font-weight: 550;
     }
-        &__flex-item {
-            padding: 32px 32px;
-            background-color: #FFFFFF;
-            border-radius: 19px;
+    &__flex-item {
+        padding: 32px 32px;
+        background-color: #FFFFFF;
+        border-radius: 19px;
         }
         @media (max-width: 1024px){
+            &__title{
+                font-size: 24px;
+            }
             &__flex-item{
+                padding: 20px 20px;
                 background-image: url(../img/blanc/Union.svg);
                 background-repeat: no-repeat;
                 background-position: center right 25px;
@@ -691,6 +741,9 @@ footer{
     background-color: #EAEAEA;
 }
 .footer{
+    &__phone, &__whatsapp{
+        display: flex;
+    }
     &__flex-item{
         display: flex;
     }
@@ -785,9 +838,6 @@ footer{
 }
 
 @media (max-width: 1024px){
-    .title{
-        font-size: 32px;
-    }
     .hero{
         &__text{
             font-size: 18px;
@@ -830,11 +880,6 @@ footer{
     }
     .landing-card:last-child {
         margin-top: 12px;
-    }
-    .landing-card{
-        &__flex-item{
-            padding: 0px 0px 27px;
-        }
     }
     .footer{
         padding: 40px 0px 0px 0px;
