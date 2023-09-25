@@ -26,6 +26,12 @@
 
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
 body {
     font-family: 'Aeroport';
     background-color: var(--secondary);
@@ -129,7 +135,39 @@ body {
             transition-duration: .25s;
             z-index: 1;
             border-radius: 26px;
+            &__item-links{
+                margin-bottom: 42px;
+            }
+            &__app{
+                display: grid;
+                grid-gap: 8px;
+                grid-template-columns: 1fr 1fr 1fr;
+                max-width: 36px;
+            }
+            &__button{
+                display: block;
+            }
+            &__social{
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 8px;
+                margin-top: 24px;
+            }
+            &__social-item{
+                display: flex;
+                gap: 8px;
+                align-items: center;
+            }
+            &__icon{
+                margin-bottom: auto;
+            }
+            &__item{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 40px;
+            }
         }
+        
         #menu__toggle{
             opacity: 0;
         }
@@ -151,12 +189,15 @@ body {
 
         .menu-item {
             display: block;
-            padding: 12px 24px;
-            color: #333;
-            font-size: 20px;
-            font-weight: 600;
+            padding: 5px 10px 5px 0px;
+            color: var(--basic);
             text-decoration: none;
             transition-duration: .25s;
+            margin-bottom: 16px;
+            &__text{
+                font-size: 22px;
+                font-weight: 600;
+            }
         }
         .menu-item:hover {
             background-color: #CFD8DC;
