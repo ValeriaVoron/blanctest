@@ -84,7 +84,7 @@ body {
         margin-right: 10px;
     }
         &__burger{
-            position: absolute; 
+            position: relative; 
             cursor: pointer;
             z-index: 2;
             align-items: center;
@@ -94,12 +94,9 @@ body {
             background-color: #222222;
             border-radius: 11px;
             border: none;
-            
-        }
-
-        &__burger > span,
-        &__burger > span::before,
-        &__burger > span::after {
+        & > span,
+        & > span::before,
+        & > span::after {
             display: block;
             position: absolute;
             width: 25px;
@@ -109,16 +106,18 @@ body {
             left: 8px;
         }
 
-        &__burger > span::before {
+        & > span::before {
             content: '';
             top: -8px;
             left: 0px
         }
-        &__burger > span::after {
+        & > span::after {
             content: '';
             top: 8px;
             left: 0px
         }
+        }
+
         .menubox{
             display: block;
             position: fixed;
@@ -135,8 +134,13 @@ body {
             transition-duration: .25s;
             z-index: 1;
             border-radius: 26px;
-            &__item-links{
-                margin-bottom: 42px;
+            &__left{
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 32px;
+            }
+            &__center_position-bottom{
+                margin-top: 24px;
             }
             &__app{
                 display: grid;
@@ -186,7 +190,10 @@ body {
             visibility: visible;
             right: 0;
         }
-
+        .all-integrations{
+            display: flex;
+            gap: 3px;
+        }
         .menu-item {
             display: block;
             padding: 5px 10px 5px 0px;
@@ -197,6 +204,16 @@ body {
             &__text{
                 font-size: 22px;
                 font-weight: 600;
+            }
+            &__text_grey{
+                color: var(--rare);
+            }
+            &__text_margin{
+                margin-bottom: 8px;
+            }
+            &__item-position{
+                padding-top: 5px;
+                margin: 0;
             }
         }
         .menu-item:hover {

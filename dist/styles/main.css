@@ -450,7 +450,7 @@ body {
 }
 
 .nav__burger {
-  position: absolute;
+  position: relative;
   cursor: pointer;
   z-index: 2;
   align-items: center;
@@ -504,8 +504,14 @@ body {
   border-radius: 26px;
 }
 
-.nav .menubox__item-links {
-  margin-bottom: 42px;
+.nav .menubox__left {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px;
+}
+
+.nav .menubox__center_position-bottom {
+  margin-top: 24px;
 }
 
 .nav .menubox__app {
@@ -565,6 +571,11 @@ body {
   right: 0;
 }
 
+.nav .all-integrations {
+  display: flex;
+  gap: 3px;
+}
+
 .nav .menu-item {
   display: block;
   padding: 5px 10px 5px 0px;
@@ -577,6 +588,19 @@ body {
 .nav .menu-item__text {
   font-size: 22px;
   font-weight: 600;
+}
+
+.nav .menu-item__text_grey {
+  color: var(--rare);
+}
+
+.nav .menu-item__text_margin {
+  margin-bottom: 8px;
+}
+
+.nav .menu-item__item-position {
+  padding-top: 5px;
+  margin: 0;
 }
 
 .nav .menu-item:hover {
