@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        
+           
+        <header class="header">
+                <div class="nav">
+                    <div class="logo">
+                        <a href="#!"><img class="logo" src="../img/blanc/logo.svg" alt="logo"></a>
+                    </div>
+                    <div class="nav__btn-group">
+                        <a href="" class="nav__personal clear-button">Личный кабинет</a>
+
+                        <div class="burger-menu">
+                            <input type="checkbox" id="menu__toggle">
+                            <label class="nav__burger" for="menu__toggle">
+                                <span class="nav__burger-stick"></span>
+                            </label>
+                            <ul class="menubox container">
+                                <div class="menubox__item">
+                                    <div class="menubox__left">
+                                        <div>
+                                            <li><a class="menu-item text" href="#">Счет в Бланке</a></li>
+                                            <li><a class="menu-item text" href="#">Тарифы и подписки</a></li>
+                                            <li><a class="menu-item text" href="#">Банкоматы</a></li>
+                                            <li><a class="menu-item text" href="#">Партнерская программа</a></li>
+                                            <li><a class="menu-item text" href="#">Пригласи друга в Бланк</a></li>
+                                            <li><a class="menu-item text" href="#">Читать справку</a></li>
+                                        </div>
+                                        <div>
+                                            <div class="menubox__app">
+                                                <a href="">
+                                                    <img class="menubox__button" src="../img/blanc/appstore-menu.png" alt="">
+                                                </a>
+                                                <a href="">
+                                                    <img class="menubox__button" src="../img/blanc/googleplay-menu.png" alt="">
+                                                </a>
+                                                <a href="">
+                                                    <img class="menubox__button" src="../img/blanc/huawei-menu.png" alt="">
+                                                </a>
+                                            </div>
+                                        <div class="menubox__social">
+                                            <div class="menubox__social-item">
+                                                <img class="menubox__icon" src="../img/blanc/telegram.png" alt="">
+                                                <a href="">Новости Бланка</a>
+                                            </div>
+                                            <div class="menubox__social-item">
+                                                <img class="menubox__icon" src="../img/blanc/Socials. WhatsApp.png" alt="">
+                                                <a href="">Напиши нам в Вотсап</a>
+                                            </div>
+                                            <div class="menubox__social-item">
+                                                <img class="menubox__icon" src="../img/blanc/telephone.png" alt="">
+                                                <a href="">8 (800) 600-98-98</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="menubox__center">
+                                        <div>
+                                            <li><a class="menu-item menu-item__text" href="#">Прием платежей</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Куайринг🔥</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Интернет-эквайринг</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Торговый эквайринг</a></li>
+                                        </div>
+                                        <div class="menubox__center_position-bottom">
+                                            <li><a class="menu-item menu-item__text" href="#">Сервисы</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Бесплатная бухгалтерия</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Обмен и хранение валюты</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Комплаенс-ассистент</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Выплаты самозанятым</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Регистрация ИП или ООО</a></li> 
+                                        </div>
+                                    </div>
+                                    <div class="menubox__right">
+                                        
+                                            <li><a class="menu-item menu-item__text" href="#">Спецпредложения</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Спецтариф для нового бизнеса</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">ДМС бесплатно 🔥</a></li>
+                                        <div class="menubox__center_position-bottom">
+                                            <li><a class="menu-item menu-item__text" href="#">Интеграции</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Открытый API Бланка</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">1С:ДиректБанк</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Битрикс24</a></li>
+                                            <li><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Контур.Эльба</a></li>
+                                            <li class="all-integrations"><a class="menu-item text menu-item__text_grey menu-item__text_margin" href="#">Смотреть все интеграции</a><p class="menu-item__text_grey menu-item__item-position">></p></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+        </header>
+        <main>
+            <div class="hero container">
+                <div class="hero__container">
+                    <h1 class="hero__title">Принимай платежи<br> от физлиц по всему миру</h1>
+                    <ul class="hero__list text hero__text">
+                        <li>Настройка за 15 минут <br class="desktop-hidden"> после открытия счёта</li>
+                        <li>Комфортная комиссия <br class="desktop-hidden"> от 2,9%</li>
+                        <li>Бухгалтерия за 0 ₽</li>
+                    </ul>
+                    <a href="" class="btn hero__btn btn_position-bottom">Открыть счет</a>
+                </div>
+            </div>
+            <section class="pic-content container">
+                <div class="pic-content__container">
+                    <div class="pic-content__content-right">
+                        <h2 class="title">Подходит всем, <br> у кого онлайн-бизнес</h2>
+                        <p class="text pic-content__text">Любой — не только онлайн-курсы и марафоны,
+                        но и репетиторство, фриланс на зарубежных заказчиков,
+                        вебинары и даже платные видеопоздравления <span class="colortext">(вдруг ты популярный блогер)</span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="products container">
+                    <h2 class="title products__title">Всё, чтобы не думать о деньгах, а зарабатывать</h2>
+                    <div class="carousel">
+                    <div class="flex-block carousel-slides">
+                    <label id="slide1" for="slide1" class="flex-block__flex-item slide">
+                        <h3 class="title flex-block__title">Платежи от физлиц <br> без границ от 2,9%</h3>
+                        <p class="text flex-block__text">Международные платежи от физлиц приземлятся
+                            сразу на твой бизнес- <br> счёт. Легко и без задержек</p>
+                    </label>
+                    <label id="slide2" for="slide2" class="flex-block__flex-item slide">
+                        <h3 class="title flex-block__title">Бесплатная онлайн-касса </h3>
+                        <p class="text flex-block__text">Да, так можно было. Чеки за покупки, возвраты, коррекции формируются <br>
+                            без аренды и настройки кассы </p>
+                    </label>
+                    <label id="slide3" for="slide3" class="flex-block__flex-item slide">
+                        <h3 class="title flex-block__title">Доводим клиента <br> до покупки </h3>
+                        <p class="text flex-block__text">Догоним сомневающегося покупателя напоминанием о товаре: звонком, <br> письмом и СМС</p> 
+                    </label>
+                    <label id="slide4" for="slide4" class="flex-block__flex-item slide">
+                        <h3 class="title flex-block__title">Автоматические возвраты</h3>
+                        <p class="text flex-block__text">Если покупатель решит вернуть товар, <br> всё разрулится
+                            само — деньги <br> вернутся, делать возврат не нужно</p>
+                    </label>
+                    <label id="slide5" for="slide5" class="flex-block__flex-item slide">
+                        <h3 class="title flex-block__title">Рассрочка клиентам</h3>
+                        <p class="text flex-block__text">Покупатели получат возможность <br> платить по
+                            частям, а ты — рост <br> среднего чека своего бизнеса </p>
+                    </label>
+                    <label id="slide6" for="slide6" class="flex-block__flex-item slide">
+                        <h3 class="title flex-block__title">Бесплатная бухгалтерия для ИП на УСН</h3>
+                        <p class="text flex-block__text">Время — деньги. Возьмём бухучёт <br>
+                            на себя. Даже если у тебя уже есть <br> счета в другом банке</p>
+                    </label>
+                    </div>
+                    <aside class="carousel__navigation">
+                        <ol class="carousel__navigation-list">
+                        <li class="carousel__navigation-item">
+                            <a href="#slide1"
+                                class="carousel__navigation-button">Go to slide 1</a>
+                        </li>
+                        <li class="carousel__navigation-item">
+                            <a href="#slide2"
+                                class="carousel__navigation-button">Go to slide 2</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                            <a href="#slide3"
+                                class="carousel__navigation-button">Go to slide 3</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                            <a href="#slide4"
+                                class="carousel__navigation-button">Go to slide 4</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#slide5"
+                                    class="carousel__navigation-button">Go to slide 4</a>
+                                </li>
+                            <li class="carousel__navigation-item">
+                                    <a href="#slide6"
+                                        class="carousel__navigation-button">Go to slide 4</a>
+                                </li>
+                        </ol>
+                    </aside>
+                </div>
+                    <a href="" class="btn btn_extended products__btn">Открыть счет</a>
+                </div>
+            </section>
+            <section class="terms">
+                <div class="container">
+                    <div class="terms__main">
+                        <div class="terms__content-left">
+                            <h2 class="title terms__title">Счёт для онлайн-бизнеса</h2>
+                            <p class="text terms__text">Классные фичи — это ещё не всё! </p>
+                            <p class="text terms__text">Мы сделали действительно доступные
+                                условия <br> обслуживания, чтобы открыть такой счёт было <br>
+                                комфортно и солидной онлайн-школе, <br>
+                                и камерному проекту с небольшими охватами </p>
+                        </div>
+                        <div class="terms__content-right terms__block">
+                                <div class="terms__info-title">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/others.svg" alt="">
+                                    <div>
+                                        <p class="text terms__text">700 000 ₽ переводов физлицам</p>
+                                        <p class="text terms__text terms__text_view">Всё, что выше — 2%</p>
+                                    </div>
+                                </div>
+
+                                <div class="terms__info-title">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/Cash.svg" alt="">
+                                    <div>
+                                        <p class="text terms__text">20 платёжек</p>
+                                        <p class="text terms__text terms__text_view">Остальные по 30 ₽</p>
+                                    </div>
+                                </div>
+
+                                <div class="terms__info-title">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/Icon.svg" alt="">
+                                    <div>
+                                        <p class="text terms__text">50 000 ₽ на снятие в банкомате</p>
+                                        <p class="text terms__text terms__text_view">Всё, что выше — 2%</p>
+                                    </div>
+                                </div>
+
+                                <div class="terms__info-title">
+                                    <img class="terms__icon" aria-hidden="true" src="../img/blanc/Icon2.svg" alt="">
+                                    <div>
+                                        <p class="text terms__text">Комиссия за платежи физлиц — от 2,9%</p>
+                                    </div>
+                                </div>
+
+                                <a href="#!" class="btn terms__btn btn_green"><span class="text terms__strikethrough-text"> 1500 ₽</span>
+                                    <span class="text terms__text-size"> 1000 ₽</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="login container login__container">
+                    <h2 class="title">Открой счёт в Бланке <br> и веди бизнес <br class="desktop-hidden"> без границ</h2>
+                    <form class="login__form">
+                        <input type="tel" class="login__input" placeholder="+7  (xxx) xxx-xx-xx">
+                        <button class="btn login__btn btn_small" type="submit" value="">Отправить</button>
+                    </form>
+                    <div class="login__flex-text">
+                    <p class="text login__text login__description">Если удобнее поговорить в чате, отметь свой <br>вариант:</p>
+                    <p class="text login__text login__description login__text_disabled">Нажимая «Отправить», ты <br> соглашаешься с условиями <br> обработки персональных данных</p>
+                    </div>
+                    <div class="login__checkbox">
+                        <label class="checkbox"><input type="checkbox" class="checkbox__box-custom" name="whatsapp" value="yes">
+                            <p class="login__text checkbox__text">Напишите мне в Вотсапе</p>
+                        </label>
+                    </div>
+                    <div class="login__checkbox">
+                        <label class="checkbox"><input type="checkbox" class="checkbox__box-custom" name="whatsapp" value="yes">
+                            <p class="login__text checkbox__text">Напишите мне в Телеграме</p>
+                        </label>
+                        <button type="submit" value=""class="btn btn_hidden login__btn_hidden">Продолжить</button>
+                </div>
+            </section>
+            <section class="excellence container">
+                <h2 class="title">Мы обо всём позаботились</h2>
+
+                <div class="excellence__landing-card">
+                    <div class="landing-card">
+                        <div class="landing-card__flex-item landing-card__flex-item_view">
+                            <h3 class="title landing-card__title">Всё включено</h3>
+                            <p class="text flex-block__text">Просто открой счёт в Бланке — международные платежи и остальные фишки уже в него входят</p>
+                        </div>
+                        <div class="landing-card__flex-item landing-card__flex-item_view">
+                            <h3 class="title landing-card__title">Минимум <br class="desktop-hidden"> документов</h3>
+                            <p class="text flex-block__text">Паспорт и СНИЛС. Если у тебя ООО, ещё понадобится подтверждение юридического адреса</p>
+                        </div>
+                        
+                        <div class="landing-card__flex-item landing-card__flex-item_view">
+                            <h3 class="title landing-card__title">Один день <br class="desktop-hidden"> на всё про всё</h3>
+                            <p class="text flex-block__text">Оставь заявку на открытие счёта, назначь встречу с нами на <br> ту же дату — и мы уложимся в рабочий день. Выпустим <br> электронную подпись, отправим сканы в налоговую, откроем <br> счёт и всё подключим. Бесплатно</p>
+                        </div>
+                        
+                        <div class="landing-card__flex-item landing-card__flex-item_view">
+                            <h3 class="title landing-card__title">Платежи <br class="desktop-hidden"> без границ <br class="desktop-hidden"> в любой валюте </h3>
+                            <p class="text flex-block__text">Принимай платежи от физлиц из 185 стран в 87 разных <br> валютах</p>
+                        </div>
+                    </div>
+
+
+                    <div class="landing-card">
+                
+                        <div class="landing-card__flex-item">
+                            <h3 class="title landing-card__title">Комфортная <br class="desktop-hidden"> комиссия </h3>
+                            <p class="text flex-block__text">Только за успешные платежи от физлиц: <br>
+                                <span class="landing-card__text_bold"> для карт банков РФ </span> — 2,9% (не менее 5₽) <br>
+                                <span>для карт иностранных банков </span>— 9,5% (не менее 79₽)</p>
+                        </div>
+                        
+                        <div class="landing-card__flex-item">
+                            <h3 class="title landing-card__title">Бесплатная <br class="desktop-hidden"> встроенная <br class="desktop-hidden"> онлайн-касса </h3>
+                            <p class="text flex-block__text">Чеки за покупки, возвраты и коррекции печатаются <br> автоматически, бесплатно и безлимитно</p>
+                        </div>
+                        
+                        <div class="landing-card__flex-item">
+                            <h3 class="title landing-card__title">Частичные <br class="desktop-hidden"> возвраты</h3>
+                            <p class="text flex-block__text">Можно проводить возврат целиком, а можно частично <br> по отдельным позициям из чека</p>
+                        </div>
+                        
+                        <div class="landing-card__flex-item">
+                            <h3 class="title landing-card__title">Поддержка 24/7</h3>
+                            <p class="text flex-block__text">Нет ответа на нужный вопрос, возникла проблема или просто хочется ещё раз обсудить процесс — со всем этим можно <br> писать в чат личного кабинета </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="" class="btn excellence__btn btn_standard">Открыть счет</a>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+            <div class="footer__connection footer__flex-item">
+                <div class="footer__stores">
+                    <a href=""><img src="../img/blanc/appstore.svg" alt="" class="footer__button"></a>
+                    <a href=""><img src="../img/blanc/googleplay.svg" alt="#!" class="footer__button"></a>
+                    <a href=""><img src="../img/blanc/appgallery.svg" alt="#!" class="footer__button"></a>
+                </div>
+                <div class="footer__calls">
+                    <div class="footer__phone">
+                        <img class="footer__img" src="../img/blanc/Phone.svg" alt="#!">
+                        <p class="text footer__text">8 (800) 600-98-98 <br> <span class="colortext footer__text_size"> Бесплатно по России</span></p>
+                    </div>
+                    <div class="footer__whatsapp">
+                        <img class="footer__img" src="../img/blanc/whatsapp.svg" alt="">
+                        <p class="text footer__text footer__text_underline">Напиши в Вотсапе</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__links">
+                <a href="#!" class="footer__link">Банкоматы</a>
+                <a href="#!" class="footer__link">Тарифы</a>
+                <a href="#!" class="footer__link">Акции</a>
+                <a href="#!" class="footer__link">Правила комплексного обслуживания в Системе "Бланк"</a>
+                <a href="#!" class="footer__link">Правила комплексного обслуживания в Системе "Бланк"(архив)</a>
+                <a href="#!" class="footer__link">Правила работы с агентами в ООО «Бланк банк»</a>
+                <a href="#!" class="footer__link">Лица, под контролем либо значительным влиянием которых находится банк </a>
+                <a href="#!" class="footer__link">Отчётность</a>
+                <a href="#!" class="footer__link">Для клиентов VestaBank</a>
+                <a href="#!" class="footer__link">Раскрытие информации для регулятивных целей</a>
+                <a href="#!" class="footer__link">Лицензии и членство в ассоциациях</a>
+                <a href="#!" class="footer__link">Раскрытие информации банком — профессиональным участником рынка ценных бумаг </a>
+                <a href="#!" class="footer__link">Контактная информация </a>
+                <a href="#!" class="footer__link">Реквизиты</a>
+                <a href="#!" class="footer__link">Информация о процентных ставках по договорам банковского вклада</a>
+                <a href="#!" class="footer__link">Корпоративное управление</a>
+                <a href="#!" class="footer__link">Деятельность по договорам банковского вклада с физическими лицами</a>
+            </div>
+            <div class="footer__logo">
+                <a href="#!"><img class="logo" src="../img/blanc/logo.svg" alt="logo"></a>
+            </div>
+
+            <div class="footer__footer">
+                <div class="footer__license">
+                    <p class="footer__link">ООО «Бланк банк» <br> <a href="" class="footer__link"> Лицензия ЦБ РФ № 2368 от 06.07.2021</a></p>
+                </div>
+                <div class="footer__social">
+                    <img src="../img/blanc/telegram.svg" alt="#!">
+                    <img src="../img/blanc/vk.svg" alt="">
+                </div>
+            </div>
+        </div>
+        </footer>  
+    </body>
+</html>
